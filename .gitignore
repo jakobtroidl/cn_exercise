@@ -131,3 +131,5 @@ dmypy.json
 .DS_Store
 
 .idea/
+
+cn_task20/cmake-build-debug/
