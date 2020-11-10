@@ -6,8 +6,8 @@ using namespace Eigen;
 // vector vector multiplication
 float vec_x_vec(int n)
 {
-    VectorXd vec1 = VectorXd::Zero(n);
-    VectorXd vec2 = VectorXd::Zero(n);
+    VectorXd vec1 = VectorXd::Random(n);
+    VectorXd vec2 = VectorXd::Random(n);
 
     std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
     float m = vec1.dot(vec2);
@@ -20,8 +20,8 @@ float vec_x_vec(int n)
 // matrix vector multiplication
 float mat_x_vec(int n)
 {
-    MatrixXd mat1 = MatrixXd::Identity(n, n);
-    VectorXd vec2 = VectorXd::Zero(n);
+    MatrixXd mat1 = MatrixXd::Random(n, n);
+    VectorXd vec2 = VectorXd::Random(n);
 
     std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
     MatrixXd m = mat1 * vec2;
@@ -34,8 +34,8 @@ float mat_x_vec(int n)
 // matrix matrix multiplication
 float mat_x_mat(int n)
 {
-    MatrixXd mat1 = MatrixXd::Identity(n, n);
-    MatrixXd mat2 = MatrixXd::Identity(n, n);
+    MatrixXd mat1 = MatrixXd::Random(n, n);
+    MatrixXd mat2 = MatrixXd::Random(n, n);
 
     std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
     MatrixXd m = mat1 * mat2;
