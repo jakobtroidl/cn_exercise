@@ -55,7 +55,7 @@ int my_eigen() {
     for (int i = 0; i < p; i++)
     {
         int n = pow(2,i);
-        float sec = mat_x_mat(n);
+        float sec = mat_x_mat(n) / pow(n, 3);
         std::cout << n << ": " << sec << std::endl;
     }
 
@@ -65,7 +65,7 @@ int my_eigen() {
     for (int i = 0; i < p; i++)
     {
         int n = pow(2,i);
-        float sec = mat_x_vec(n);
+        float sec = mat_x_vec(n) / pow(n, 2);
         std::cout << n << ": " << sec << std::endl;
     }
 
@@ -75,7 +75,7 @@ int my_eigen() {
     for (int i = 0; i < p; i++)
     {
         int n = pow(2,i);
-        float sec = vec_x_vec(n);
+        float sec = vec_x_vec(n) / pow(n, 1);
         std::cout << n << ": " << sec << std::endl;
     }
 

@@ -56,7 +56,7 @@ int my_blaze()
     for (int j = 0; j < p; j++)
     {
         int n = pow(2, j);
-        float t = blaze_mat_x_mat(n);
+        float t = blaze_mat_x_mat(n) / pow(n, 3);
         std::cout << "n: " << n << ", " << t << std::endl;
     }
 
@@ -66,7 +66,7 @@ int my_blaze()
     for (int j = 0; j < p; j++)
     {
         int n = pow(2, j);
-        float t = blaze_mat_x_vec(n);
+        float t = blaze_mat_x_vec(n) / pow(n, 2);
         std::cout << "n: " << n << ", " << t << std::endl;
     }
 
@@ -76,7 +76,7 @@ int my_blaze()
     for (int j = 0; j < p; j++)
     {
         int n = pow(2, j);
-        float t = blaze_vec_x_vec(n);
+        float t = blaze_vec_x_vec(n) / pow(n, 1);
         std::cout << "n: " << n << ", " << t << std::endl;
     }
 }
